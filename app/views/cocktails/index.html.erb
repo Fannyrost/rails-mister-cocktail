@@ -1,11 +1,19 @@
-<h1>All our Cocktails</h1>
-
-<%= link_to 'Add a cocktail' , new_cocktail_path %>
-
-
-<% @cocktails.each do |cocktail| %>
-<h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-<% end %>
+<div class="banner">
+  <%= image_tag "banner.jpg", style: 'width:100vw;height:100vh', alt: "cocktails" %>
+</div>
 
 
+<div class="container text-center">
+  <h1>Choose your drink !</h1>
+    <div class="d-flex flex-wrap justify-content-between align-content-start mt-5">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="card-cocktail">
+          <img src='<%= cocktail.image_url %>' alt="">
+        <h2><%= cocktail.name %></h2>
+        </div>
+        <% end %>
+    <% end %>
+  </div>
+</div>
 

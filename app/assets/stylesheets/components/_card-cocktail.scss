@@ -1,0 +1,20 @@
+.card-cocktail {
+  background: $ghost-white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px lightgrey;
+  width: 150px;
+  height: 160px;
+  margin-bottom: 10px;
+  img{
+    width: 60px;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  h2{
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+}
