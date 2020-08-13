@@ -1,7 +1,8 @@
-.button-turquoise {
+.button-sunset {
   background: $sunset;
   opacity: 1;
   padding: 5px 8px;
+  height: 30px;
   border-radius: 5px;
    &:hover{
     background: $ghost-white;
@@ -13,6 +14,23 @@
     &:hover {
       text-decoration: none;
       color: $sunset;
+    }
+
+  }
+}
+
+.button-white {
+  background: $ghost-white;
+
+   &:hover{
+    background: $sunset;
+    border: 1px solid $ghost-white;
+   }
+
+  a{
+    color: $sunset;
+    &:hover {
+      color: $ghost-white;
     }
 
   }

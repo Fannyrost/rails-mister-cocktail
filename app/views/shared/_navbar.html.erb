@@ -1,7 +1,10 @@
 <div class="navbar d-flex">
-  <div class="d-flex align-items-end">
-    <div><%= image_tag 'logo.png', style: 'height:40px;width:auto;' %></div>
+  <%= link_to cocktails_path do  %>
+    <div class="d-flex align-items-end">
+    <div><%= image_tag 'https://image.flaticon.com/icons/svg/920/920700.svg', style: 'height:40px;width:auto;' %></div>
     <div><h3>CocktailsIt</h3></div>
-  </div>
-  <div class="button-turquoise"><%= link_to 'Add a cocktail', new_cocktail_path %></div>
+   </div>
+  <% end %>
+
+  <div class="button-sunset"><%= link_to 'Add a cocktail', new_cocktail_path %></div>
 </div>

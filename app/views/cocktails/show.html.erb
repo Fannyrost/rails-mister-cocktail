@@ -1,7 +1,15 @@
-<h1><%= @cocktail.name %></h1>
-<% @cocktail.doses.each do |dose| %>
-<p><%= dose.description %></p>
-<p><%= dose.ingredient.name %></p>
-<% end %>
+<div class="show-background">
+  <div class="container show-display">
+    <div class="d-flex justify-content-between">
+      <div><h1 id="title"><%= @cocktail.name %></h1></div>
+      <div class="button-sunset"><%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail)  %></div>
+    </div>
+    <% @cocktail.doses.each do |dose| %>
+    <ul class="ml-4">
+      <li><%= "#{dose.description} #{dose.ingredient.name}"  %></li>
+    </ul>
+    <% end %>
 
-<%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail)  %>
+
+  </div>
+</div>
