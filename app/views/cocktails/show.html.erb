@@ -10,8 +10,9 @@
 </div>
 
 <div class="show-background">
-  <div class="container d-flex justify-content-between sticky">
-      <div class="show-display cocktail-content">
+  <div class="container">
+    <div class="d-flex justify-content-between ">
+      <div class="show-display large-box">
         <h1 id="title"><%= @cocktail.name %></h1>
         <% @cocktail.doses.each do |dose| %>
         <ul class="ml-4">
@@ -19,7 +20,7 @@
         </ul>
         <% end %>
       </div>
-      <div class="show-display add-dose">
+      <div class="show-display small-box">
         <h3>Think it misses something ?</h3>
         <p>Add an ingredient !</p>
         <%= simple_form_for [@cocktail, @dose] do |f| %>
@@ -28,6 +29,27 @@
           <%= f.submit  %>
         <% end %>
       </div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="show-display large-box">
+        <h3>All the reviews</h3>
+        <% @cocktail.reviews.each do |review| %>
+        <ul class="ml-4">
+          <li><%= "#{review.rating} - #{review.content}"%></li>
+        </ul>
+        <% end %>
+
+      </div>
+      <div class="show-display small-box">
+        <h3>You tried it already ?</h3>
+        <p>Let us know what you think !</p>
+        <%= simple_form_for [@cocktail, @review] do |f| %>
+          <%= f.input :content %>
+          <%= f.input :rating %>
+          <%= f.submit  %>
+        <% end %>
+      </div>
+    </div>
 
 
   </div>
