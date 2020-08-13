@@ -1,0 +1,29 @@
+.banner {
+
+  background-image: url('banner.jpg');
+  width: 100vw;
+  height: 100vh;
+}
+
+.banner-content {
+  margin: auto 500px;
+  padding-top: 200px;
+
+  h1 {
+    background: rgba(242, 82,56, 0.7);
+    color: $ghost-white;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  p {
+    background: rgba(242, 82,56, 0.7);
+    background-opacity: 0.5;
+    color: $ghost-white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+
+
+}

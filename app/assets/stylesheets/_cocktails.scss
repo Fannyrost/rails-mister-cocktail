@@ -14,11 +14,13 @@
 
   height : 100vh;
 }
-
-.show-display {
+.sticky {
   position: sticky;
   top: 200px;
   left: 130px;
+}
+
+.show-display {
   background: $ghost-white;
   filter: opacity(90%);
 
@@ -30,4 +32,13 @@
 
 #title {
   margin-bottom: 20px;
+}
+
+.add-dose {
+  width: 300px;
+}
+
+.cocktail-content {
+  flex-grow: 1;
+  margin-right: 20px;
 }
