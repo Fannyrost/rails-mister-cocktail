@@ -1,13 +1,13 @@
 <%= render 'shared/navbar' %>
 
-<div class="show-background">
+<div class="show-background" style="background-image: url('<%= cl_image_path @cocktail.photo.key, crop: :fill %>')">
   <div class="container my-0 marge-up">
     <div class="d-flex justify-content-between ">
       <div class="show-display large-box">
         <h1 id="title"><%= @cocktail.name %></h1>
         <% @cocktail.doses.each do |dose| %>
         <ul class="ml-4">
-          <li><%= "#{dose.description} #{dose.ingredient.name}"  %></li>
+          <li><%= "#{dose.description} #{dose.ingredient.name}" %></li>
         </ul>
         <% end %>
       </div>
