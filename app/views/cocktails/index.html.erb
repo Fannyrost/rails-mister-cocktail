@@ -1,12 +1,4 @@
-<div class="navbar d-flex">
-  <%= link_to cocktails_path do  %>
-    <div class="d-flex align-items-end">
-    <div><%= image_tag 'https://image.flaticon.com/icons/svg/920/920700.svg', style: 'height:40px;width:auto;' %></div>
-    <div><h3>CocktailsIt</h3></div>
-   </div>
-  <% end %>
-  <div class="button-sunset"><%= link_to 'Add a cocktail', new_cocktail_path %></div>
-</div>
+<%= render 'shared/navbar_index' %>
 
 <div class="banner">
   <div class="banner-content text-center" >

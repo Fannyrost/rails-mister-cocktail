@@ -1,16 +1,7 @@
-<div class="navbar navbar-white d-flex">
-  <%= link_to cocktails_path do  %>
-    <div class="d-flex align-items-end">
-    <div><%= image_tag 'https://image.flaticon.com/icons/svg/920/920700.svg', style: 'height:40px;width:auto;' %></div>
-    <div><h3>CocktailsIt</h3></div>
-   </div>
-  <% end %>
-
-  <div class="button-sunset"><%= link_to 'Add a cocktail', new_cocktail_path %></div>
-</div>
+<%= render 'shared/navbar' %>
 
 <div class="show-background">
-  <div class="container pt-4 my-0">
+  <div class="container pt-5 my-0">
     <div class="d-flex justify-content-between ">
       <div class="show-display large-box">
         <h1 id="title"><%= @cocktail.name %></h1>
@@ -50,7 +41,6 @@
         <% end %>
       </div>
     </div>
-
-
+    <br>
   </div>
 </div>

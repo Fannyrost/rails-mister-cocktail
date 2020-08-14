@@ -15,8 +15,21 @@
 }
 
 
+
 .navbar-white {
+  padding: 20px;
   background: $sunset;
-  transition: 1 ease;
+  position: sticky;
+  top: 0px;
+
+  img {
+    padding : 0px 7px
+  }
+  h3 {
+    margin: 0;
+    padding: 0px 7px;
+    color: $ghost-white;
+  }
 }
+
 
