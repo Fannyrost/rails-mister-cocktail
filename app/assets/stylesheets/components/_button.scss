@@ -21,6 +21,10 @@
 
 .button-white {
   background: $ghost-white;
+  opacity: 1;
+  padding: 5px 8px;
+  height: 30px;
+  border-radius: 5px;
 
    &:hover{
     background: $sunset;
