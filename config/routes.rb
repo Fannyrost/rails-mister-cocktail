@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create]
   end
 
+  post '/cocktail_selected', to: 'cocktails#cocktail_selected'
 end

@@ -28,6 +28,12 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def cocktail_selected
+    @cocktail = Cocktail.find(params[:cocktail])
+    redirect_to cocktail_path(@cocktail)
+  end
+
+
   private
 
   def set_cocktails

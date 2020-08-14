@@ -5,5 +5,14 @@
     <div><h3>CocktailsIt</h3></div>
    </div>
   <% end %>
-  <div class="button-sunset"><%= link_to 'Add a cocktail', new_cocktail_path %></div>
+
+  <div class="d-flex align-items-start">
+    <div class=" pr-3 ">
+      <%= form_tag('cocktail_selected') do %>
+        <%= select_tag "cocktail", options_from_collection_for_select(@cocktails, "id", "name") %>
+       <%= submit_tag 'Search', class: 'button-sunset text-center' %>
+      <% end %>
+    </div>
+    <div class="button-sunset"><%= link_to 'Add a cocktail', new_cocktail_path %></div>
+  </div>
 </div>
