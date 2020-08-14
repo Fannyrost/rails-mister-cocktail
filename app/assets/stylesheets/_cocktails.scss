@@ -9,13 +9,12 @@
 
 
 .show-background {
-  height : 100vh;
+  height : 800px;
   margin: 0px;
 
 
   &::before {
       content: "";
-      height: 800px;
       position: absolute;
       top: 80px;
       right: 0px;

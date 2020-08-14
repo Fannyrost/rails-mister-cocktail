@@ -1,6 +1,6 @@
 <%= render 'shared/navbar' %>
 
-<div class="show-background" style="background-image: url('<%= cl_image_path @cocktail.photo.key, crop: :fill %>')">
+<div class="show-background" style="background-image: url('<%= cl_image_path @cocktail.photo.key, width: 1280, crop: :fit%>')">
   <div class="container my-0 marge-up">
     <div class="d-flex justify-content-between ">
       <div class="show-display large-box">
