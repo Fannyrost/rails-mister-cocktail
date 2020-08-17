@@ -6,7 +6,16 @@
    </div>
   <% end %>
 
-  <div class="button-white"><%= link_to 'Add a cocktail', new_cocktail_path %></div>
-
+ <div class="d-flex align-items-start">
+    <div class=" pr-3 ">
+      <%= form_tag('cocktail_selected') do %>
+        <%= select_tag "cocktail", options_from_collection_for_select(@cocktails, "id", "name") %>
+       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+       <%= submit_tag 'Search', class: 'button-white text-center' %>
+      <% end %>
+    </div>
+    <div class="button-white"><%= link_to 'Add a cocktail', new_cocktail_path %></div>
+  </div>
+</div>
 
 </div>
